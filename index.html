@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-05</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font awesome cdn -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <header class="flex mx-10 justify-between p-3">
+        <div class="">
+            <div class="flex justify-center items-center gap-3">
+                <div class="w-12">
+                    <img src="./assets/logo.png" alt="">
+                </div>
+                <h1 class="font-bold">Emergency <br> Service</h1>
+            </div>
+
+        </div>
+        <div class="flex gap-3">
+            <div class=" flex bg-[#41FF6B] w-[106px] rounded-2xl justify-center gap-3 p-2">
+                <p id="love-number">0</p>
+                <img src="./assets/heart.png" alt="" class="w-5">
+            </div>
+            <div class=" flex bg-[#41FF6B] w-[106px] rounded-2xl justify-center gap-3 p-2">
+                <p id="coin-number">100</p>
+                <img src="./assets/coin.png" alt="" class="w-5">
+            </div>
+            <div class=" flex bg-[#41FF6B] w-[106px] rounded-2xl justify-center gap-3 p-2">
+                <p class="p-1"><span id="copy-number">0</span> Copy</p>
+            </div>
+
+        </div>
+    </header>
+    <main class="bg-[#DFEFFF]">
+        <nav class="bg-[#006747] text-center justify-items-center mx-auto p-5">
+            <img src="./assets/logo-dark.png" alt="" class="w-24">
+            <h1 class="font-bold text-white text-4xl">Emergency Service Directory</h1>
+            <p class="text-white">Government Emergency Services at Your Fingertip – A Project by Government of the
+                People’s Republic of
+                Bangladesh</p>
+        </nav>
+        <!-- card section  -->
+        <section class="w-11/12 mx-auto grid grid-cols-12">
+            <section class="col-span-9">
+                <div class="cards-container">
+                    <div class="card-items grid grid-cols-3">
+                        <!-- 1st card -->
+                        <div class="card bg-white w-96 p-8 m-3">
+                            <div class="flex justify-between mb-2">
+                                <img src="./assets/emergency.png" alt="" class="w-12 h-12 p-3 rounded-xl bg-[#FFE3E2]">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="">
+                                <h2 class="font-bold ">National Emergency Number</h2>
+                                <p class="mb-2 text-gray-500">National Emergency</p>
+                                <p class="font-bold mb-2">999</p>
+                                <div class="w-[53px] h-[37] bg-[#f0f0f0] text-center rounded-full"><p>All</p></div>
+                                <div class="mt-4 flex justify-evenly">
+                                    <div>
+                                        <button class="btn px-10 bg-blue-200 text-white"><i class="fa-solid fa-copy"></i>Copy</button>
+                                    </div>
+                                    <div>
+                                        <button class="btn px-15 bg-green-500 text-white"><i class="fa-solid fa-phone"></i>Call</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 2nd card -->
+                        <div class="card bg-white w-96 p-8 m-3">
+                            <div class="flex justify-between mb-2">
+                                <img src="./assets/emergency.png" alt="" class="w-12 h-12 p-3 rounded-xl bg-[#FFE3E2]">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="">
+                                <h2 class="font-bold ">National Emergency Number</h2>
+                                <p class="mb-2 text-gray-500">National Emergency</p>
+                                <p class="font-bold mb-2">999</p>
+                                <div class="w-[80px] h-[40] bg-[#f0f0f0] text-center rounded-full text-gray-700"><p>Electricity</p></div>
+                                <div class="mt-4 flex justify-evenly">
+                                    <div>
+                                        <button class="btn px-10 bg-blue-200 text-white"><i class="fa-solid fa-copy"></i>Copy</button>
+                                    </div>
+                                    <div>
+                                        <button class="btn px-15 bg-green-500 text-white"><i class="fa-solid fa-phone"></i>Call</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                       
+                    </div>
+                </div>
+            </section>
+            <aside class="col-span-3 bg-yellow-100">
+                <h1>aside </h1>
+            </aside>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
