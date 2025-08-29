@@ -1,6 +1,8 @@
 console.log('js file is connected')
 
 const callHistoryData = [];
+
+
 // love life btn
 const lifeButtons = document.getElementsByClassName("life")
 for (const lifeButton of lifeButtons) {
@@ -32,6 +34,28 @@ for (const coinBtn of coinBtns) {
             }
             callHistoryData.push(data)
             console.log(callHistoryData)
+            // call history
+            const callHistoryContainer = document.getElementById("call-history-container")
+            callHistoryContainer.innerText = " "
+            for (const data of callHistoryData) {
+                console.log(data)
+                const div = document.createElement("div")
+                console.log(div)
+                div.innerHTML = `
+                    <div class="flex justify-between items-center bg-[#FAFAFA] p-4 m-8 rounded-xl">
+                        <div>
+                            <h2 class="font-semibold text-xl">${data.name}</h2>
+                            <p class="text-gray-500 text-xl">999</p>
+                        </div>
+                        <div>
+                            <p>${data.date}</p>
+                        </div>
+                    </div>
+
+    `
+                callHistoryContainer.appendChild(div)
+
+            }
         }
         else {
             alert("❌ You don't have sufficient coin. It will take at least twenty coins to make a call.")
@@ -54,23 +78,3 @@ for (const copyBtn of copyBtns) {
 
 
 
-// call history
-const callHistoryContainer = document.getElementById("call-history-container")
-// callHistoryContainer.innerText = " "
-for (const data of callHistoryData) {
-    const div = document.createElement("div")
-    div.innerHTML = `
-                    <div class="flex justify-between items-center bg-[#FAFAFA] p-4 m-8 rounded-xl">
-                        <div>
-                            <h2 class="font-semibold text-xl">${data.name}</h2>
-                            <p class="text-gray-500 text-xl">999</p>
-                        </div>
-                        <div>
-                            <p>${data.date}/p>
-                        </div>
-                    </div>
-
-    `
-    const all = callHistoryContainer.appendChild(div)
-    console.log(all)
-}
