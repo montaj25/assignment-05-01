@@ -1,4 +1,4 @@
-console.log('js file is connected')
+
 
 const callHistoryData = [];
 
@@ -24,28 +24,27 @@ for (const coinBtn of coinBtns) {
             const newCoinNumber = coinNumber - 20;
             document.getElementById("coin-number").innerText = newCoinNumber;
 
+            const title = coinBtn.parentNode.parentNode.parentNode.childNodes[1].innerText
             const subTitle = coinBtn.parentNode.parentNode.parentNode.childNodes[3].innerText
             const subTitleNumber = coinBtn.parentNode.parentNode.parentNode.childNodes[5].innerText
             alert("📞" + " " + subTitle + " " + subTitleNumber + "..........");
 
             const data = {
-                name: subTitle,
+                name: title,
+                number: subTitleNumber,
                 date: new Date().toLocaleTimeString()
             }
             callHistoryData.push(data)
-            console.log(callHistoryData)
             // call history
             const callHistoryContainer = document.getElementById("call-history-container")
-            callHistoryContainer.innerText = " "
+            // callHistoryContainer.innerText = " "
             for (const data of callHistoryData) {
-                console.log(data)
                 const div = document.createElement("div")
-                console.log(div)
                 div.innerHTML = `
                     <div class="flex justify-between items-center bg-[#FAFAFA] p-4 m-8 rounded-xl">
                         <div>
                             <h2 class="font-semibold text-xl">${data.name}</h2>
-                            <p class="text-gray-500 text-xl">999</p>
+                            <p class="text-gray-500 text-xl">${data.number}</p>
                         </div>
                         <div>
                             <p>${data.date}</p>
@@ -77,4 +76,11 @@ for (const copyBtn of copyBtns) {
 }
 
 
+// Clear button
+document.getElementById("clear")
+.addEventListener("click", function(){ 
+    const callHistoryContainer = document.getElementById("call-history-container")
+    callHistoryContainer.innerText = " "    
+})
+// copy text
 
